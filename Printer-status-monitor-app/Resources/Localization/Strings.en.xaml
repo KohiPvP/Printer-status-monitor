@@ -1,0 +1,38 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <!-- Menu -->
+    <sys:String x:Key="MenuFile">File</sys:String>
+    <sys:String x:Key="MenuEdit">Edit</sys:String>
+    <sys:String x:Key="MenuPreferences">Preferences</sys:String>
+
+    <!-- File submenu -->
+    <sys:String x:Key="MenuFile_New">New</sys:String>
+    <sys:String x:Key="MenuFile_Open">Open</sys:String>
+    <sys:String x:Key="MenuFile_Exit">Exit</sys:String>
+
+    <!-- Edit submenu -->
+    <sys:String x:Key="MenuEdit_Undo">Undo</sys:String>
+    <sys:String x:Key="MenuEdit_Redo">Redo</sys:String>
+    <sys:String x:Key="MenuEdit_Cut">Cut</sys:String>
+    <sys:String x:Key="MenuEdit_Copy">Copy</sys:String>
+    <sys:String x:Key="MenuEdit_Paste">Paste</sys:String>
+
+    <!-- Preferences submenu -->
+    <sys:String x:Key="MenuPreferences_Settings">Settings</sys:String>
+    <sys:String x:Key="MenuPreferences_Themes">Themes</sys:String>
+
+    <!-- Printer properties -->
+    <sys:String x:Key="DigitalProperty_Name">Name</sys:String>
+    <sys:String x:Key="DigitalProperty_Location">Location</sys:String>
+    <sys:String x:Key="DigitalProperty_IpAddress">Ip address</sys:String>
+    <sys:String x:Key="DigitalProperty_ModelType">Modell Type</sys:String>
+
+    <!-- CRUD -->
+    <sys:String x:Key="Deletion">Deletion</sys:String>
+    <sys:String x:Key="Delete">Delete</sys:String>
+    <sys:String x:Key="Loading">Loading</sys:String>
+    <sys:String x:Key="Save">Save</sys:String>
+    <sys:String x:Key="New">New</sys:String>
+</ResourceDictionary>

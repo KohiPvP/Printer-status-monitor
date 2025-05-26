@@ -1,0 +1,73 @@
+﻿<Window
+    x:Class="Printer_status_monitor_app.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:Printer_status_monitor_app.ViewModells="clr-namespace:Printer_status_monitor_app.ViewModells"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:Printer_status_monitor_app"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="MainWindow"
+    Width="800"
+    Height="450"
+    mc:Ignorable="d">
+    <Window.DataContext>
+        <Printer_status_monitor_app.ViewModells:MainViewModel />
+    </Window.DataContext>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Menu Grid.Row="0">
+            <MenuItem Header="{DynamicResource MenuFile}">
+                <MenuItem Header="{DynamicResource MenuFile_New}" />
+                <MenuItem Header="{DynamicResource MenuFile_Open}" />
+                <MenuItem Header="{DynamicResource MenuFile_Exit}" />
+            </MenuItem>
+
+            <MenuItem Header="{DynamicResource MenuEdit}">
+                <MenuItem Command="{Binding UndoCommand}" Header="{DynamicResource MenuEdit_Undo}" />
+                <MenuItem Command="{Binding RedoCommand}" Header="{DynamicResource MenuEdit_Redo}" />
+                <MenuItem Header="{DynamicResource MenuEdit_Cut}" />
+                <MenuItem Header="{DynamicResource MenuEdit_Copy}" />
+                <MenuItem Header="{DynamicResource MenuEdit_Paste}" />
+            </MenuItem>
+
+            <MenuItem Header="{DynamicResource MenuPreferences}">
+                <MenuItem Header="{DynamicResource MenuPreferences_Settings}" />
+                <MenuItem Header="{DynamicResource MenuPreferences_Themes}" />
+            </MenuItem>
+        </Menu>
+        <DataGrid
+            x:Name="dataGrid"
+            Grid.Row="1"
+            AutoGenerateColumns="False"
+            CanUserAddRows="False"
+            ItemsSource="{Binding Printers}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding DigitalProperty.Name}" Header="{DynamicResource DigitalProperty_Name}" />
+                <DataGridTextColumn Binding="{Binding DigitalProperty.Location}" Header="{DynamicResource DigitalProperty_Location}" />
+                <DataGridTextColumn Binding="{Binding DigitalProperty.IpAddress}" Header="{DynamicResource DigitalProperty_IpAddress}" />
+                <DataGridTextColumn Binding="{Binding DigitalProperty.ModelType}" Header="{DynamicResource DigitalProperty_ModelType}" />
+
+                <!--  Törlés gomb minden sorhoz  -->
+                <DataGridTemplateColumn Header="{DynamicResource Deletion}">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button
+                                Command="{Binding DataContext.DeletePrinterCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                                CommandParameter="{Binding}"
+                                Content="{DynamicResource Delete}" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <StackPanel Grid.Row="2" Orientation="Horizontal">
+            <Button Command="{Binding SaveToFileCommand}" Content="{DynamicResource Save}" />
+            <Button Command="{Binding AddNewPrinterCommand}" Content="{DynamicResource New}" />
+        </StackPanel>
+    </Grid>
+</Window>
