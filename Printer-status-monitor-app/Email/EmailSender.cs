@@ -17,7 +17,7 @@ class EmailSender
 
             SmtpClient smtpServer = new SmtpClient("mailhost.hilti.com");
             smtpServer.Port = 25;
-            smtpServer.Credentials = new NetworkCredential("barazso@hilti.com", "Adgjmpt2004@");
+            smtpServer.Credentials = new NetworkCredential("barazso@hilti.com", "jelszó");
             smtpServer.EnableSsl = false;
 
             smtpServer.Send(mail);
