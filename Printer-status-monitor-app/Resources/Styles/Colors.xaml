@@ -1,0 +1,68 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+	<!-- Colors -->
+	<Color x:Key="Hilti_Red">#d2051e</Color>
+	<Color x:Key="White">#ffffff</Color>
+	<Color x:Key="Steel_100">#524f53</Color>
+	<Color x:Key="Steel_60">#989598</Color>
+	<Color x:Key="Steel_40">#b9b9b9</Color>
+	<Color x:Key="Steel_20">#dcdcdc</Color>
+	<Color x:Key="Heavy_Concrete60">#b7b3ab</Color>
+	<Color x:Key="Heavy_Concrete30">#d7d8d3</Color>
+	<Color x:Key="Heavy_Concrete20">#e7e5e5</Color>
+	<Color x:Key="Heavy_Concrete10">#f4f2f0</Color>
+	
+	<!-- Complementery text-->
+	<Color x:Key="Black">#000000</Color>
+	
+	<Color x:Key="Burgundy">#671c3e</Color>
+	<Color x:Key="Gravel">#4d6389</Color>
+	<Color x:Key="Gravel_L3">#4d6389</Color>
+	<Color x:Key="Scaffold">#00804a</Color>
+	<Color x:Key="Scaffold_L3">#acd8bf</Color>
+	<Color x:Key="Sand">#c3881a</Color>
+	<Color x:Key="Sand_L3">#f4dbad</Color>
+	<Color x:Key="Brick">#c45e33</Color>
+	<Color x:Key="Brick_L3">#ffcfb6</Color>
+	<Color x:Key="Wood">#7c4c2e</Color>
+	<Color x:Key="Wood_L3">#e0c1ae</Color>
+	
+	<!--Signalling Colors-->
+	<Color x:Key="Signalling_Red">#ff0100</Color>	
+	<Color x:Key="Signalling_Yellow">#ffaf00</Color>
+	<Color x:Key="Signalling_Green">#1baf38</Color>
+
+	
+	<!-- Brushes -->
+	<SolidColorBrush x:Key="Hilti_Red_Brush" Color="{StaticResource Hilti_Red}" />
+	
+	<SolidColorBrush x:Key="White_Brush" Color="{StaticResource White}" />
+	<SolidColorBrush x:Key="Steel_100_Brush" Color="{StaticResource Steel_100}" />
+	<SolidColorBrush x:Key="Steel_60_Brush" Color="{StaticResource Steel_60}" />
+	<SolidColorBrush x:Key="Steel_40_Brush" Color="{StaticResource Steel_40}" />
+	<SolidColorBrush x:Key="Steel_15_Brush" Color="{StaticResource Steel_15}" />
+	<SolidColorBrush x:Key="Heavy_Concrete60_Brush" Color="{StaticResource Heavy_Concrete60}" />
+	<SolidColorBrush x:Key="Heavy_Concrete30_Brush" Color="{StaticResource Heavy_Concrete30}" />
+	<SolidColorBrush x:Key="Heavy_Concrete20_Brush" Color="{StaticResource Heavy_Concrete20}" />
+	<SolidColorBrush x:Key="Heavy_Concrete10_Brush" Color="{StaticResource Heavy_Concrete10}" />
+
+	<!-- Complementary text -->
+	<SolidColorBrush x:Key="Black_Brush" Color="{StaticResource Black}" />
+	<SolidColorBrush x:Key="Burgundy_Brush" Color="{StaticResource Burgundy}" />
+	<SolidColorBrush x:Key="Gravel_Brush" Color="{StaticResource Gravel}" />
+	<SolidColorBrush x:Key="Gravel_L3_Brush" Color="{StaticResource Gravel_L3}" />
+	<SolidColorBrush x:Key="Scaffold_Brush" Color="{StaticResource Scaffold}" />
+	<SolidColorBrush x:Key="Scaffold_L3_Brush" Color="{StaticResource Scaffold_L3}" />
+	<SolidColorBrush x:Key="Sand_Brush" Color="{StaticResource Sand}" />
+	<SolidColorBrush x:Key="Sand_L3_Brush" Color="{StaticResource Sand_L3}" />
+	<SolidColorBrush x:Key="Brick_Brush" Color="{StaticResource Brick}" />
+	<SolidColorBrush x:Key="Brick_L3_Brush" Color="{StaticResource Brick_L3}" />
+	<SolidColorBrush x:Key="Wood_Brush" Color="{StaticResource Wood}" />
+	<SolidColorBrush x:Key="Wood_L3_Brush" Color="{StaticResource Wood_L3}" />
+
+	<!-- Signalling Colors -->
+	<SolidColorBrush x:Key="Signalling_Red_Brush" Color="{StaticResource Signalling_Red}" />
+	<SolidColorBrush x:Key="Signalling_Yellow_Brush" Color="{StaticResource Signalling_Yellow}" />
+	<SolidColorBrush x:Key="Signalling_Green_Brush" Color="{StaticResource Signalling_Green}" />
+</ResourceDictionary>
